@@ -7,8 +7,7 @@ DROP TABLE IF EXISTS cars;
 
 CREATE TABLE cars
 (
-  id INTEGER NOT NULL
-  AUTO_INCREMENT,
+  id SERIAL,
   cost VARCHAR
   (25) NOT NULL DEFAULT 250,
   name VARCHAR
@@ -39,7 +38,7 @@ CREATE TABLE cars
 
 
   INSERT INTO cars
-    (cost,name,engine, color, MPG, mileage, feature_one, feature_two, feature_three, feature_four, feature_five, feature_six)
+    (cost, name, engine, color, MPG, mileage, feature_one, feature_two, feature_three, feature_four, feature_five, feature_six)
   VALUES
     ('13000', 'Toyota Yaris', '1.5L I-4 Cyl', 'Pulse', '32 mpg City 40 mpg Hwy', '33,886', 'Wireless phone connectivity', 'Split folding rear seat', 'Steering wheel mounted audio controls', 'Exterior parking camera rear', 'Remote keyless entry', 'Alloy wheels'),
     ('11239', 'Nissan Sentra', '1.8L I-4 Cyl', 'Fresh Powder', '29 mpg City 37 mpg Hwy', '39886', 'Wireless phone connectivity', 'Split folding rear seat', 'Steering wheel mounted audio controls', 'Exterior parking camera rear', 'Remote keyless entry', 'Fully automatic headlights'),
@@ -55,16 +54,3 @@ CREATE TABLE cars
 -- ['Tesla Pretense', 'Ford Bronco', 'Nissan Thunder Punch', 'Kia Forte', 'Ford Focus', 'Kia Soul', "Toyota it'ill run", 'Toyota Yaris', 'Nissan Sentra', 'Ford Focus', 'Nissan Sentra', 'Hyundai Accent', 'Kia Rio S', 'Chevrolet Cruze',]
 
 
-// -- { "id": "11",
-// --   "cost": "23000",
-// --   "name": "Toyota Yaris",
-// --   "engine": "1.5L I-4 Cyl",
-// --   "color": "Pulse",
-// --   "MPG": "32 mpg City 40 mpg Hwy",
-// --   "mileage": "33,886",
-// --   "feature_one": "Wireless phone connectivity",
-// --   "feature_two": "Split folding rear seat",
-// --   "feature_three": "Steering wheel mounted audio controls",
-// --   "feature_four": "Exterior parking camera rear",
-// --   "feature_five": "Remote keyless entry",
-// --   "feature_six": "Alloy wheels" }
